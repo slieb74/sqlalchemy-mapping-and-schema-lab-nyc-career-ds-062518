@@ -1,7 +1,8 @@
 tags:
   - sql
   - jupyter
-  - sql alchemy
+  - sqlalchemy
+  - introductory
 
 languages:
   - sql
