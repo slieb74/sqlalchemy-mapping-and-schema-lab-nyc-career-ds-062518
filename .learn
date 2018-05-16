@@ -1,0 +1,10 @@
+tags:
+  - sql
+  - jupyter
+  - sql alchemy
+
+languages:
+  - sql
+  - python
+
+jupyter_notebook: true
