@@ -13,7 +13,7 @@ SQLAlchemy is a powerful Object Relational Mapper that lets us "map" our Python 
 
 #### Create and connect to our database
 
-We can create and establish a connection to our new database with sqlalchemy's `create_engine` function.  The first step is to import this function from the `sqlalchemy` library at the top of our `schema.py` file.  Then, we will use this function to create a database, in this case `musicians.db`, with the following line of code:
+We can create and establish a connection to our new database with SQLAlchemy's `create_engine` function.  The first step is to import this function from the `sqlalchemy` library at the top of our `schema.py` file.  Then, we will use this function to create a database, in this case `musicians.db`, with the following line of code:
 
 > ```engine = create_engine('sqlite:///musicians.db', echo=True)```
 
@@ -21,7 +21,7 @@ Technically, the database does not exist yet.  We will not create the musicians 
 
 #### Declare a mapping
 
-Next, we need our Python classes to have the functionality of the *declarative base class*.  The declarative base is responsible for cataloging our classes and tables.  We import the `declarative_base` from the sqlalchemy library at the top of our Python script with the other dependencies as so:
+Next, we need our Python classes to have the functionality of the *declarative base class*.  The declarative base is responsible for cataloging our classes and tables.  We import the `declarative_base` from the SQLAlchemy library at the top of our Python script with the other dependencies as so:
 
 > ```from sqlalchemy.ext.declarative import declarative_base```
 
@@ -39,7 +39,7 @@ Finally, with all this setup out of the way, we are ready to create a SQL table!
 4. dob - datetime
 5. alive - boolean
 
-We will need to import `Column`, `Integer`, `String`, `DateTime`, and `Boolean` from the sqlalchemy at the top of the `schema.py` file.  By now, we are importing so much of the sqlalchemy library that it probably makes sense to simply import all.
+We will need to import `Column`, `Integer`, `String`, `DateTime`, and `Boolean` from the SQLAlchemy at the top of the `schema.py` file.  By now, we are importing so much of the SQLAlchemy library that it probably makes sense to simply import all.
 
 > ```from sqlalchemy import *```
 
