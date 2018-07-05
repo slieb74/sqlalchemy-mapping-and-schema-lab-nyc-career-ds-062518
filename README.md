@@ -27,24 +27,6 @@ Next, we need our Python classes to have the functionality of the *declarative b
 
 > ```Base = declarative_base()```
 
-### Part 2: Create the schema
-
-#### Construct the musicians table
-
-Finally, with all this setup out of the way, we are ready to create a SQL table!  We mentioned above that our classes need to have the functionality of the declarative base class.  How can we achieve this?  We can use object inheritance!  By passing our `Musician` class the `Base` instance we declared above as an argument, our Musician class will inherit all of the functionality of what commonly is referred to as the parent or super class.  
-
-```python
-class Musician(Base):
-```
-
-The table's name will be `'musicians'`, and it should contain the following five columns having these respective datatypes:
-
-> 1. id - integer
-2. fullname - string
-3. instrument - string
-4. dob - datetime
-5. alive - boolean
-
 We will need to import `Column`, `Integer`, `String`, `DateTime`, and `Boolean` from the SQLAlchemy library at the top of the `schema.py` file.  By now, we are importing so much of the SQLAlchemy library that it probably makes sense to simply import all using the universal, `*`.
 
 > ```from sqlalchemy import *```
@@ -60,3 +42,7 @@ Remember that engine variable from the very beginning that we left at the bottom
 Prior to running the tests, run the `python schema.py` in your terminal after you have finished writing all the code in the `schema.py` file.  Python will read and execute your code and create the `musicians.db` file.  The tests check this file's output.
 
 If the tests don't pass, for now simply delete the `musicians.db` file then try again!
+
+## Summary
+
+In this lab we learned that declaring a mapping means creating a SQLAlchemy object that takes our python class objects and maps them to our SQL tables and saves them in our database. We also learned the basic setup for importing SQLAlchemy, creating a connection to our database, creating a mapping with a SQL table, and finally how to execute creating the database.
