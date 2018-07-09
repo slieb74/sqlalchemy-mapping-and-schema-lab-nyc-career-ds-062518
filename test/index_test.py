@@ -1,6 +1,6 @@
 import unittest, sqlite3
 
-connection = sqlite3.connect('../musicians.db')
+connection = sqlite3.connect('./musicians.db')
 cursor = connection.cursor()
 
 class TestSchema(unittest.TestCase):
